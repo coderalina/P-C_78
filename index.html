@@ -1,0 +1,53 @@
+<html>
+    <head><title>Family Book</title></head>
+    <body style="background-color:#fec5bb;";>
+        <center>
+            <h1 id="456">My Family Book</h1>
+            <img style="height: 450px; width: 360px;" src="Untitled.png" id="Family">
+            <br>
+            <br>
+            <h2 id="family_text"></h2>
+            <button id="321" onclick="nextslide()">Next Family Member</button>
+        </center>
+        <script>
+            var pics_array=[
+            "Untitled.png",   
+                "father.jfif",
+                     "mother.jfif",
+                     "me.jfif",
+                     "brother.jfif",
+                     
+                     ];
+            
+            var text_array=[
+                     "Mr.Shadav Aman Khan",
+                     "Mrs.Zeenat Aman",
+                     "Alina Khan",
+                     "Eshan Khan",
+                     "My Family Book",
+                     ];
+                     var o = 1;
+                     var y = 0;
+
+                 function nextslide() { 
+
+                  if(o == 5) {
+                  o=0;
+                  document.getElementById("456").style.display = "none";
+                  };
+
+                  document.getElementById("Family").src = pics_array[o];
+                  o++;
+
+                  if(y == 5){
+                     y=0; 
+                     }; 
+                  
+                  document.getElementById("family_text").innerHTML=text_array[y]; 
+                  y++;
+
+                };
+
+        </script>
+    </body>
+</html>
